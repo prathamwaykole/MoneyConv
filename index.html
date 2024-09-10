@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Money Converter</title>
+<style>
+*{font-size:60px; font-family:calibri  ;}
+body{ background-color:lightblue; }
+</style>
+</head>
+<body>
+<center>
+<h1>Currency Converter</h1>
+<form>
+<label for ="dollar" > $ </label>
+<input type="number" step = "any" id="dollar" placeholder="amt in dollar" />
+</br></br>
+<label for = "rupees"> ₹ </label>
+<input type="number" step = "any" id="rupees" placeholder="amt in rupees" />
+</form>
+<script>
+let dollar = document.getElementById("dollar");
+let rupees = document.getElementById("rupees");
+
+dollar.addEventListener("input",function(){
+let d = parseFloat(dollar.value);
+let r = d*84;
+rupees.value = r.toFixed(2);
+});
+dollar.addEventListener("input",function(){
+let r =parseFloat(rupees.value);
+let d = d/84;
+dollar.value = r.toFixed(2);
+});
+</script>
+</center>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
